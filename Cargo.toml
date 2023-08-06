@@ -1,0 +1,13 @@
+[package]
+name = "tomcatbrute"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.29", features = ["full"] }
+ferris-says = "0.3"
+reqwest= {version= "0.11",features=["json"]}
+clap = "4.3.19"
+base64 = "0.21.2"

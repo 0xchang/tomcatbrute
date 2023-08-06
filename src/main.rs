@@ -11,7 +11,9 @@ async fn main() {
     let sem = Arc::new(Semaphore::new(cp.get_thread().into()));
     let url = Arc::new(cp.get_url());
     let users = vec!["tomcat", "admin", "root", "user"];
-    let passwords = vec!["123456", "tomcat", "admin", "user", "root", "root123"];
+    let passwords = vec![
+        "123456", "tomcat", "admin", "user", "root", "root123", "s3cret",
+    ];
     let mut handles = Vec::new();
     for u in users.clone().into_iter() {
         for p in passwords.clone().into_iter() {
@@ -37,5 +39,4 @@ async fn main() {
     }
 
     println!("task done!");
-    println!("{}", &url);
 }
